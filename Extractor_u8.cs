@@ -178,7 +178,7 @@ public class U8Extractor
     }
    static void CreateDirectory(string dir)
     {
-        Directory.CreateDirectory("/" + dir);
+        Directory.CreateDirectory(dir);
     }
    static void StoreDataInDictionary()
     {
