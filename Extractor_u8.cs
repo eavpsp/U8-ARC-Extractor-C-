@@ -174,18 +174,18 @@ public class U8Extractor
     static void WriteDataToFile(string filename, BinaryReader reader, int offset, int size)
     {
         reader.BaseStream.Seek(offset, SeekOrigin.Begin);
-        File.WriteAllBytes(filename, reader.ReadBytes(size));
+        File.WriteAllBytes(filePath +"/"+ filename, reader.ReadBytes(size));
     }
    static void CreateDirectory(string dir)
     {
-        Directory.CreateDirectory(dir);
+        Directory.CreateDirectory(filePath + "/" +dir);
     }
 
    public static void Main(string[] args)
 {
     if (args.Length > 0)
     {
-        
+        filePath = Directory.GetCurrentDirectory();
         ExtractU8(args[0]);
     }
 }
