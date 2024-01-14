@@ -5,7 +5,7 @@ using System.Text;
 public class U8Extractor
 {
    
-    string filePath;
+    static string filePath;
     private const uint U8Magic = 0x55AA382D;
     struct NodeData 
     {
@@ -180,14 +180,12 @@ public class U8Extractor
     {
         Directory.CreateDirectory(dir);
     }
-   static void StoreDataInDictionary()
-    {
 
-    }
    public static void Main(string[] args)
 {
     if (args.Length > 0)
     {
+        
         ExtractU8(args[0]);
     }
 }
